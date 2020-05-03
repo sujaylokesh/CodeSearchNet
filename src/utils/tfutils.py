@@ -153,7 +153,7 @@ def pool_sequence_embedding(pool_mode: str,
         last_hidden_states = seq_token_embeddings_masked[:, -1]
 
         # squeeze to correct dim if training
-        last_hidden_states = tf.squeeze(last_hidden_states)
+        #last_hidden_states = tf.squeeze(last_hidden_states)
 
         mxp = max_pool(sequence_token_embeddings, sequence_lengths, sequence_token_masks)  # B x D
         mnp = mean_pool(sequence_token_embeddings, sequence_lengths, sequence_token_masks) # B x D
