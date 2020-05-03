@@ -9,7 +9,7 @@ from utils.tfutils import pool_sequence_embedding
 class NBoWEncoder(MaskedSeqEncoder):
     @classmethod
     def get_default_hyperparameters(cls) -> Dict[str, Any]:
-        encoder_hypers = { 'nbow_pool_mode': 'concat',
+        encoder_hypers = { 'nbow_pool_mode': 'weighted_mean',
                          }
         hypers = super().get_default_hyperparameters()
         hypers.update(encoder_hypers)
