@@ -5,6 +5,18 @@
 [paper]: https://arxiv.org/abs/1909.09436
 
 # Our Project
+We improved the performance of the neural bag of words using concat pooling. 
+We chose concat pooling because ...
+
+we did this by ... (concat pooling explantion)
+
+our NDCG score was ....
+
+Our rank was ...
+
+How nbow works ...
+
+
 
 **Table of Contents**
 
