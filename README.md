@@ -11,8 +11,7 @@ We improved the performance of the neural bag of words using concat pooling.
 
 Using Google Cloud Platform, we set up a Cloud VM using the Nvidia image which runs Ubuntu 18.04 and has the necessary CUDA drivers.
 
-![hi](https://user-images.githubusercontent.com/22870968/81441604-0e2d3680-9140-11ea-8aad-8dd858eda7aa.png")
-
+  ![alt text](images/5.png "infrastructure")
 ## Neural Bag of Words
 The baseline model we chose is the Neural Bag of words model or nbow. The Traditional NBOW algorithm uses the hyper parameter "weighted mean". This hyperparameter is a pooling method which Takes a batch of sequences of token embeddings and applies a pooling function, returning one representation for each sequence. In this case the pooling function is a weighted mean. 
 
