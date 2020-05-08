@@ -6,6 +6,22 @@
 
 # Our Project
 We improved the performance of the neural bag of words using concat pooling. 
+
+## Neural Bag of Words
+The baseline model we chose is the Neural Bag of words model or nbow. The Traditional NBOW algorithm uses the hyper parameter "weighted mean". This hyperparameter is a pooling method which Takes a batch of sequences of token embeddings and applies a pooling function, returning one representation for each sequence. In this case the pooling function is a weighted mean. 
+
+For pooling we pass the sequence_token_embeddings, sequence_lengths and sequence_token_masks
+  
+    sequence_token_embeddings: A float32 tensor of shape [B, T, D], where B is the
+         batch dimension, T is the maximal number of tokens per sequence, and D is
+         the embedding size.
+
+    sequence_lengths: An int32 tensor of shape [B].
+
+    sequence_token_masks: A float32 tensor of shape [B, T] with 0/1 values used 
+    for masking out unused entries in sequence_embeddings.
+
+      
 We chose concat pooling because ...
 
 we did this by ... (concat pooling explantion)
