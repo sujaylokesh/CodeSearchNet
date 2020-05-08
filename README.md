@@ -54,23 +54,16 @@ For pooling we pass the sequence_token_embeddings, sequence_lengths and sequence
     sequence_token_masks: A float32 tensor of shape [B, T] with 0/1 values used 
     for masking out unused entries in sequence_embeddings.
 
-      
-We chose concat pooling because ...
+## What is Concat Pooling
+  Concat pooling basically is a basically applying 'TF.Concat' on the mean and max pool functions. The max and mean pool functions  have been implemented  by  Github. 
 
-The signal in text classification tasks is often contained in a few words, which may occur anywhere in the document. As input docu- ments can consist of hundreds of words, informa- tion may get lost if we only consider the last hid- den state of the model. For this reason, we con- catenate the hidden state at the last time step hT of the document with both the max-pooled and the mean-pooled representation of the hidden states over as many time steps as fit in GPU memory
+  ![alt text](images/6.png "rank")
 
-hc = [hT , maxpool(H), meanpool(H)]
+## Why Concat Pooling
 
-  a   new   pooling   option, ’concat’, which will perform the operation described above using the max and mean pool functions  already  implemented  by  Github. Most  of the repository operates on the assumption that the user has correctly set the encoder hyperparameters such that there are no dimension overflow when creating the embeddings
+The signal in text classification tasks is often contained in a few words, which may occur anywhere in the document. As input documents can consist of hundreds of words, information may get lost if we only consider the last hidden state of the model. For this reason, we concatenate the hidden state at the last time step hT of the document with both the max-pooled and the mean-pooled representation of the hidden states over as many time steps as fit in GPU memory
 
-we did this by ... (concat pooling explantion)
-
-our NDCG score was ....
-
-Our rank was ...
-
-How nbow works ...
-
+    hc = [hT , maxpool(H), meanpool(H)]
 
 # Table of Contents
 
