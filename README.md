@@ -9,9 +9,37 @@ We improved the performance of the neural bag of words using concat pooling.
 
 ## Setting up the Infrastructure
 
-Using Google Cloud Platform, we set up a Cloud VM using the Nvidia image which runs Ubuntu 18.04 and has the necessary CUDA drivers.
+Using Google Cloud Platform, we set up a Cloud VM using the Nvidia image which runs Ubuntu 18.04 and has the necessary CUDA drivers. 
 
+We also allocated an Nvidia Tesla T4. This might have a been a little overkill, but we did acheive a 30 minute reduction in training time and hence decided to use that.
   ![alt text](images/5.png "infrastructure")
+
+## Visualization
+
+We used Weights & Biases as a tool to help visualize our model.
+
+![alt text](images/3.png "wandb")
+
+We also were able plot our validation loss, training loss, etc, on our Weights & Biases Dashboard
+
+![alt text](images/1.png "plots")
+
+## Results
+
+After about 4 and a half hours of training our model, we acheived the following results : 
+
+![alt text](images/4.png "res")
+
+MRR is Mean Reciprocal Rank, it is used to measure processes that produce a list of responses therefore it is ideal in this use case. 
+
+Given the time constraint, we were able to improve the NBOW Model but were only able to achieve #32.
+We are confident, given more time we would be able to reach a better overall rank. 
+
+Our NDCG Score is shown below
+
+![alt text](images/2.png "rank")
+
+
 ## Neural Bag of Words
 The baseline model we chose is the Neural Bag of words model or nbow. The Traditional NBOW algorithm uses the hyper parameter "weighted mean". This hyperparameter is a pooling method which Takes a batch of sequences of token embeddings and applies a pooling function, returning one representation for each sequence. In this case the pooling function is a weighted mean. 
 
@@ -33,7 +61,7 @@ The signal in text classification tasks is often contained in a few words, which
 
 hc = [hT , maxpool(H), meanpool(H)]
 
-  a   new   pooling   option,’concat’, which will perform the operation de-scribed above using the max and mean pool func-tions  already  implemented  by  Github.   Most  ofthe repository operates on the assumption that theuser has correctly set the encoder hyperparameterssuch that there is no dimension overflow when cre-
+  a   new   pooling   option, ’concat’, which will perform the operation described above using the max and mean pool functions  already  implemented  by  Github. Most  of the repository operates on the assumption that the user has correctly set the encoder hyperparameters such that there are no dimension overflow when creating the embeddings
 
 we did this by ... (concat pooling explantion)
 
