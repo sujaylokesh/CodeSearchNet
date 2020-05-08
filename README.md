@@ -7,6 +7,12 @@
 # Our Project
 We improved the performance of the neural bag of words using concat pooling. 
 
+## Setting up the Infrastructure
+
+Using Google Cloud Platform, we set up a Cloud VM using the Nvidia image which runs Ubuntu 18.04 and has the necessary CUDA drivers.
+
+![alt text](https://user-images.githubusercontent.com/22870968/81441604-0e2d3680-9140-11ea-8aad-8dd858eda7aa.png")
+
 ## Neural Bag of Words
 The baseline model we chose is the Neural Bag of words model or nbow. The Traditional NBOW algorithm uses the hyper parameter "weighted mean". This hyperparameter is a pooling method which Takes a batch of sequences of token embeddings and applies a pooling function, returning one representation for each sequence. In this case the pooling function is a weighted mean. 
 
@@ -23,6 +29,12 @@ For pooling we pass the sequence_token_embeddings, sequence_lengths and sequence
 
       
 We chose concat pooling because ...
+
+The signal in text classification tasks is often contained in a few words, which may occur anywhere in the document. As input docu- ments can consist of hundreds of words, informa- tion may get lost if we only consider the last hid- den state of the model. For this reason, we con- catenate the hidden state at the last time step hT of the document with both the max-pooled and the mean-pooled representation of the hidden states over as many time steps as fit in GPU memory
+
+hc = [hT , maxpool(H), meanpool(H)]
+
+  a   new   pooling   option,’concat’, which will perform the operation de-scribed above using the max and mean pool func-tions  already  implemented  by  Github.   Most  ofthe repository operates on the assumption that theuser has correctly set the encoder hyperparameterssuch that there is no dimension overflow when cre-
 
 we did this by ... (concat pooling explantion)
 
