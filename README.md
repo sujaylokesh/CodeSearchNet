@@ -41,7 +41,9 @@ Our NDCG Score is shown below
 
 
 ## Neural Bag of Words
-The baseline model we chose is the Neural Bag of words model or nbow. The Traditional NBOW algorithm uses the hyper parameter "weighted mean". This hyperparameter is a pooling method which Takes a batch of sequences of token embeddings and applies a pooling function, returning one representation for each sequence. In this case the pooling function is a weighted mean. 
+The baseline model we chose is the neural bag-of-words model (NBOW). In general, bag-of-words is a method of extracting features from text which can be used in machine learning algorithms such as neural networks. It is called a "bag" of words because information about grammar and word order are discarded; it measures whether known words occur in a given text, and not where they occur. Each sentence or document is represented as a vector which contains a vocabulary of known words and a measure of the presence and the number of these known words in the text at hand. The occurence of words in a text can be  scored using a variety of methods: for example, with a boolean value (0 if absent, 1 if present), by counting the number of times each word appears in the text, by calculating the frequency that each word appears in a document out of all the words in the document, or with TF-IDF (Term Frequency - Inverse Document Frequency).
+
+The NBOW model is a fully connected feed forward network that uses bag-of-words input. It takes an average of the word vectors in the input text and classifies using a logistic regression output layer. The Traditional NBOW algorithm uses the hyper parameter "weighted mean". This hyperparameter is a pooling method which Takes a batch of sequences of token embeddings and applies a pooling function, returning one representation for each sequence. In this case the pooling function is a weighted mean. 
 
 For pooling we pass the sequence_token_embeddings, sequence_lengths and sequence_token_masks
   
