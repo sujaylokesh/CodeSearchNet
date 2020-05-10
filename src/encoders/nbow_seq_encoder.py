@@ -10,6 +10,7 @@ class NBoWEncoder(MaskedSeqEncoder):
     @classmethod
     def get_default_hyperparameters(cls) -> Dict[str, Any]:
         encoder_hypers = { 'nbow_pool_mode': 'concat',
+                            'token_embedding_size': 256,
                          }
         hypers = super().get_default_hyperparameters()
         hypers.update(encoder_hypers)
