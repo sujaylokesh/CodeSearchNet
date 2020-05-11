@@ -19,7 +19,7 @@ Here we have performed some EDA on the python data files.
 It involves downloading the data, unzipping and visualizing of the data
 
 
-[EDA](ExploratoryDataAnalysis.ipynb)
+Click Here : [EDA](ExploratoryDataAnalysis.ipynb)
 
 ## Setting up the Infrastructure
 
