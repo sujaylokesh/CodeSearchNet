@@ -11,7 +11,10 @@
 We improved the performance of the neural bag of words using concat pooling. 
 
 We did our exploratory data analysis in this file.
-[link]: ExploratoryDataAnalysis.ipynb
+
+
+# Exploratory Data Analysis
+CLICK Here : [link]:(ExploratoryDataAnalysis.ipynb)
 
 ## Setting up the Infrastructure
 
