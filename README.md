@@ -15,7 +15,8 @@ We did our exploratory data analysis in this file.
 
 # Exploratory Data Analysis
 
-
+Here we have performed some EDA on the python data files. 
+It involves downloading the data, unzipping and visualizing of the data
 [EDA](ExploratoryDataAnalysis.ipynb)
 
 ## Setting up the Infrastructure
