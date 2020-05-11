@@ -14,7 +14,9 @@ We did our exploratory data analysis in this file.
 
 
 # Exploratory Data Analysis
-CLICK Here : [link]:(ExploratoryDataAnalysis.ipynb)
+
+
+[EDA](ExploratoryDataAnalysis.ipynb)
 
 ## Setting up the Infrastructure
 
